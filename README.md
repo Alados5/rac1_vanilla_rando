@@ -1,2 +1,4 @@
-# rac1_vanilla_rando
-Ratchet &amp; Clank 1 Randomizer, but Vanilla edition!
+# R&C1 Vanilla Randomizer
+Ratchet & Clank 1 Randomizer, but Vanilla edition!
+
+- by Alados5
