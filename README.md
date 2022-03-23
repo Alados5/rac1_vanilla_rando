@@ -18,7 +18,7 @@ This includes:
 ## First screen: Choose Strats
 Once you launch the randomizer, the first page will look like this:
 
-![Screen1_v1.7](https://i.imgur.com/rgJlxAH.png)
+![Screen1_v1.8](https://i.imgur.com/rgJlxAH.png)
 
 This is here to let you choose if you want some scenarios (which require hard strats) to be in the randomizer pool. You can get more info on a tooltip by hovering on each box. They are:
 - **Packless**: the randomizer might ban the use of all packs in any level (and ensure you get other gadgets required for a packless route). Some planets are easy to complete packless, so if set to "No", this option stops this from happening on Kerwan, Eudora, Rilgar, Umbris, Orxon 2 and Quartu.
@@ -41,7 +41,7 @@ Once you have decided which scenarios you'll allow, click on **RANDOMIZE!** to l
 
 The screen should change to something like this:
 
-![Screen2_v1.7](https://i.imgur.com/jJw5B5F.png)
+![Screen2_v1.8](https://i.imgur.com/0xjTWoG.png)
 
 As you can see, all weapons including the wrench and all gadgets are represented by their icons and can be randomized. Even Clank and Giant Clank actions are represented! So what does it all mean?
 - For each planet, the weapons and gadgets not available on first visit will be grayed out, and cannot be used even in revisits.
@@ -56,4 +56,4 @@ You have to find a way to reach Veldin 2 and defeat Drek without using any banne
 ---
 _Randomizer by Alados5, @adriaalados5 on Twitter, @Alados5#8743 on Discord_
 
-_Title, arrow and gloss images by Zeldrene_
+_Title, arrows and CRT gloss images by Zeldrene_
