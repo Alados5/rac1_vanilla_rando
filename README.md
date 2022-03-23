@@ -1,9 +1,14 @@
 # R&C1 Vanilla Randomizer
 Ratchet & Clank 1 Randomizer, but Vanilla edition!
+What weapons or gadgets will you be able to use on each planet? We don't know, it's random!
+
+This was inspired by the super cool [RaC1 Randomizer Mod by bordplate](https://github.com/bordplate/rac1-randomizer), and the fact that it has some requirements (PS3 with Homebrew enabled and RACMAN) the majority of people might not meet or want to go over. So this is purely vanilla! Of course, it cannot change where you get each weapon and gadget, so it just randomly bans you from using a selection of them, ensuring the run is always beatable!
+
+---
 
 ## Installing/Launching
 You can either download/clone the repo, or download the release zip file.
-They include:
+This includes:
 - Main executable, open to launch randomizer
 - Image folder, needed to show all icons
 - Fonts folder, needed to show text with custom fonts
@@ -13,11 +18,11 @@ They include:
 ## First screen: Choose Strats
 Once you launch the randomizer, the first page will look like this:
 
-![Screen1_v1.5](https://i.imgur.com/iteXUFl.png)
+![Screen1_v1.7](https://i.imgur.com/rgJlxAH.png)
 
 This is here to let you choose if you want some scenarios (which require hard strats) to be in the randomizer pool. You can get more info on a tooltip by hovering on each box. They are:
 - **Packless**: the randomizer might ban the use of all packs in any level (and ensure you get other gadgets required for a packless route). Some planets are easy to complete packless, so if set to "No", this option stops this from happening on Kerwan, Eudora, Rilgar, Umbris, Orxon 2 and Quartu.
-- **ILJ / Sinaflips**: these tricks are available only on some specific planets with special surfaces, and can be hard to perform for a long time. They are usually not required, but for example, if the Heli-Pack is the only gadget allowed on Umbris, you have to Infinite Long Jump (ILJ) from ship to boss. This lets you choose if this situation enters the randomizer pool.
+- **ILJs and Sinaflips**: these tricks are available only on some specific planets with special surfaces, and can be hard to perform for a long time. They are usually not required, but for example, if the Heli-Pack is the only gadget allowed on Umbris, you have to Infinite Long Jump (ILJ) from ship to boss. This lets you choose if this situation enters the randomizer pool.
 - **Batalia SIs**: without the Grindboots, getting the Gaspar infobot on Batalia requires a hard chain of Slope Intercepts on one of the mountains, and then you must glide along the rail without falling. You can make sure this scenario never happens or have it as a possibility with this option.
 - **Tree Skip**: on Orxon 1, you can skip both Clank sections with a very precise jump on a tree, to then punch a pipe and proxy to the Pokitaru infobot. If you want to make sure this is never the only way to beat Orxon 1, you can leave this strat disabled.
 - **Oltanis Wall Magneboots**: you can get to the Quartu infobot without PDA or Grindboots and only the Magneboots by continuing to walk on a wall as if it was a magnetic surface. I'm not sure how hard this is but you can choose not to know either disabling this scenario!
@@ -36,7 +41,7 @@ Once you have decided which scenarios you'll allow, click on **RANDOMIZE!** to l
 
 The screen should change to something like this:
 
-![Screen2_v1.5](https://i.imgur.com/3fLlVeg.png)
+![Screen2_v1.7](https://i.imgur.com/jJw5B5F.png)
 
 As you can see, all weapons including the wrench and all gadgets are represented by their icons and can be randomized. Even Clank and Giant Clank actions are represented! So what does it all mean?
 - For each planet, the weapons and gadgets not available on first visit will be grayed out, and cannot be used even in revisits.
@@ -50,3 +55,4 @@ You have to find a way to reach Veldin 2 and defeat Drek without using any banne
 
 ---
 _Randomizer by Alados5, @adriaalados5 on Twitter, @Alados5#8743 on Discord_
+_Title, arrow and gloss images by Zeldrene_
