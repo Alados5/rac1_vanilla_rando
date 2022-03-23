@@ -56,4 +56,4 @@ You have to find a way to reach Veldin 2 and defeat Drek without using any banne
 ---
 _Randomizer by Alados5, @adriaalados5 on Twitter, @Alados5#8743 on Discord_
 
-_Title, arrows and CRT gloss images by Zeldrene_
+_Special thanks to Zeldrene for helping with visual elements and general testing!_
