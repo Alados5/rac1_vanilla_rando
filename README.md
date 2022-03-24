@@ -54,7 +54,7 @@ As you can see, all weapons including the wrench and all gadgets are represented
 You have to find a way to reach Veldin 2 and defeat Drek without using any banned or unavailable items! Good luck!
 
 ---
-_Randomizer by Alados5. [Twitter](https://twitter.com/adriaalados5), [Discord](https://discord.gg/MnEHvz8).
+_Randomizer by Alados5: [Twitter](https://twitter.com/adriaalados5), [Discord](https://discord.gg/MnEHvz8)._
 
 _Special thanks to Zeldrene for helping with visual elements and general testing!_
 
