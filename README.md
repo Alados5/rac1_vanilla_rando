@@ -17,7 +17,7 @@ Download the latest release, it will be a zip file containing:
 ## First screen: Choose Strats
 Once you launch the randomizer, the first page will look like this:
 
-![Screen1_v1.8](https://i.imgur.com/rgJlxAH.png)
+![Screen1_v1.9](https://i.imgur.com/qhm8cK8.png)
 
 This is here to let you choose if you want some scenarios (which require hard strats) to be in the randomizer pool. You can get more info on a tooltip by hovering on each box. They are:
 - **Packless**: the randomizer might ban the use of all packs in any level (and ensure you get other gadgets required for a packless route). Some planets are easy to complete packless, so if set to "No", this option stops this from happening on Kerwan, Eudora, Rilgar, Umbris, Orxon 2 and Quartu.
@@ -32,7 +32,9 @@ If you're not familiar with any tricks or speed tech, I strongly recommend you w
 
 Before you continue, if you're planning on streaming a randomizer run capturing this window, you can click on this icon <img src="/images/Paint.png" height="17"> to change the background color to magenta to easily chroma-key it. Click again to go back to black.
 
-Once you have decided which scenarios you'll allow, click on **RANDOMIZE!** to let the magic happen. In theory, only completable runs should appear, but don't hesitate to hit me up if something goes wrong. 
+Once you have decided which scenarios you'll allow, click on **RANDOMIZE!** to let the magic happen. In theory, only completable runs should appear, but don't hesitate to hit me up if something goes wrong.
+
+When you click on randomize, a save_data.txt file will be created on the same folder. This is done so if you close the randomizer or have to stop playing before finishing a run, next time you can load data instead of randomizing again. You can load data using this button: <img src="/images/mem_card.png" height="17">, which will also send you to the next screen.
 
 ---
 
@@ -40,7 +42,7 @@ Once you have decided which scenarios you'll allow, click on **RANDOMIZE!** to l
 
 The screen should change to something like this:
 
-![Screen2_v1.8](https://i.imgur.com/0xjTWoG.png)
+![Screen2_v1.9](https://i.imgur.com/0xjTWoG.png)
 
 As you can see, all weapons including the wrench and all gadgets are represented by their icons and can be randomized. Even Clank and Giant Clank actions are represented! So what does it all mean?
 - For each planet, the weapons and gadgets not available on first visit will be grayed out, and cannot be used even in revisits.

@@ -76,15 +76,19 @@ def YellowHighlight(widget):
     widget.bind('<Leave>', leave)
 
 def bgColor():
-    global btnPaint
+    global btnPaint, btnLoad
     if(root['bg']=='#000000'):
         root['bg']='#ff00ff'
         btnPaint['bg']='#ff00ff'
         btnPaint['activebackground']='#ff00ff'
+        btnLoad['bg']='#ff00ff'
+        btnLoad['activebackground']='#ff00ff'
     else:
         root['bg']='#000000'
         btnPaint['bg']='#000000'
         btnPaint['activebackground']='#000000'
+        btnLoad['bg']='#000000'
+        btnLoad['activebackground']='#000000'
 
 def alaLink():
     webbrowser.open_new("https://www.twitch.tv/alados5")
@@ -134,6 +138,22 @@ def init_rando():
     RNGsol = randomize(packless, ilj_snflip, batalia_si, tree_skip, oltanis_mb)
     root.quit()
 
+def load_rando():
+    global btnLoad, RNGsol
+    try:
+        load_file = open("save_data.txt", "r")
+        load_file = eval(load_file.read())
+        if(type(load_file)==type((1,))):
+            for widget in root.winfo_children():
+                widget.destroy()
+            RNGsol = load_file
+            root.quit()
+        else:
+            btnLoad['state'] = DISABLED
+    except:
+        btnLoad['state'] = DISABLED
+
+
 def choose_strats():
     global imgYN, btnPaint
     virtual_img = PhotoImage(width=1, height=1)
@@ -145,6 +165,7 @@ def choose_strats():
     imgInit = ImageTk.PhotoImage(imgCRTf.resize((350,60),Image.ANTIALIAS))
     imgPaint = ImageTk.PhotoImage(file='images/paint.png')
     imgAla2 = ImageTk.PhotoImage(Image.open('images/alados5.png').resize((35,35),Image.ANTIALIAS))
+    imgMemCard = ImageTk.PhotoImage(Image.open('images/mem_card.png').resize((35,35),Image.ANTIALIAS))
 
     imgNo  = Image.open('images/radio_no.png').resize((24,24),Image.ANTIALIAS)
     imgYes = Image.open('images/radio_yes.png').resize((24,24),Image.ANTIALIAS)
@@ -180,7 +201,7 @@ def choose_strats():
     btnInfo.place(width=350,height=80, x=45,y=195)
 
 
-    global btnS1, btnS1Box, btnS2, btnS2Box, btnS3, btnS3Box, btnS4, btnS4Box, btnS5, btnS5Box
+    global btnS1, btnS1Box, btnS2, btnS2Box, btnS3, btnS3Box, btnS4, btnS4Box, btnS5, btnS5Box, btnLoad
 
     btnS1 = Button(root, text="Packless", image=imgStratN,
                    compound='c', borderwidth=5, relief=RIDGE, command=toggleS1,
@@ -229,6 +250,12 @@ def choose_strats():
                      bg='#66684B', fg='#586aa5')
     btnInit.place(width=350,height=60, x=45,y=605)
     YellowHighlight(btnInit)
+
+
+    btnLoad = Button(root, image=imgMemCard, command=load_rando, bg='#000000',
+                     borderwidth=0, relief=FLAT, activebackground='#000000')
+    btnLoad.place(width=35,height=35, x=5,y=670)
+    CreateToolTip(btnLoad, 'Load saved randomized data.', 'No valid data to load.')
 
     root.mainloop()
 
@@ -527,6 +554,10 @@ for w in PW[idxP+1]:
     btnW[w]['state'] = NORMAL
     if w not in RSW[idxP+1]:
         banW[w].place(height=50,width=50)
+
+mem_card = open("save_data.txt", "w")
+mem_card.write(str(RNGsol))
+mem_card.close()
 
 root.mainloop()
 
