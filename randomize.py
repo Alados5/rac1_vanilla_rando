@@ -306,15 +306,15 @@ def randomize(packless,ilj_snflip,batalia_si,tree_skip,oltanis_mb):
     if(not oltanis_mb and 13 not in Sg):
         Sg.append(4)
 
-    PW[16] = [w for w in pool_w]
-    PG[16] = [g for g in pool_gPack]
-    RSW[16] = Sw
-    RSG[16] = Sg
-
     if(14 in Sg):
         pool_g.append(4)
     if(3 in Sg or 4 in Sg):
         pool_w.append(14)
+
+    PW[16] = [w for w in pool_w]
+    PG[16] = [g for g in pool_gPack]
+    RSW[16] = Sw
+    RSG[16] = Sg
 
 
     # Quartu
