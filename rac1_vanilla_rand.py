@@ -7,7 +7,7 @@ import webbrowser
 
 # If you have purchased SimianDisplay (the original rac1 font), you can
 # Add the otf file to the fonts folder and change this to 1 (personal use only)
-fontFree = 0
+fontFree = 1
 
 
 root = Tk()
