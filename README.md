@@ -6,9 +6,8 @@ This was inspired by the super cool [RaC1 Randomizer Mod by bordplate](https://g
 
 ---
 
-## Installing/Launching
-You can either download/clone the repo, or download the release zip file.
-This includes:
+## Downloading/Launching
+Download the latest release, it will be a zip file containing:
 - Main executable, open to launch randomizer
 - Image folder, needed to show all icons
 - Fonts folder, needed to show text with custom fonts
