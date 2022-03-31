@@ -235,7 +235,7 @@ def choose_strats():
     CreateToolTip(btnS4, 'On Orxon 1 (Clank level), you might have to perform\n'
                          "the Tree Skip to then proxy to the end of the level.")
 
-    btnS5 = Button(root, text="Oltanis Wall Magneboots", image=imgStratN,
+    btnS5 = Button(root, text="Oltanis Magnewalk", image=imgStratN,
                    compound='c', borderwidth=5, relief=RIDGE, command=toggleS5,
                    font=tkFont.Font(family=usefont, size=fontSz, weight='normal'),
                    bg='#66684B', fg='#586aa5')
@@ -262,9 +262,67 @@ def choose_strats():
 
 choose_strats()
 
-#----------
-#  PAGE 2
-#----------
+
+
+#------------
+#  SAVELOAD
+#------------
+
+global RNGsol
+# return PW, PG, PC, PGC, RSW, RSG, RSC, RSGC
+
+try:
+    PW   = RNGsol[0]
+    PG   = RNGsol[1]
+    PC   = RNGsol[2]
+    PGC  = RNGsol[3]
+    RSW  = RNGsol[4]
+    RSG  = RNGsol[5]
+    RSC  = RNGsol[6]
+    RSGC = RNGsol[7]
+    KIII = RNGsol[8]
+
+    mem_card = open("save_data.txt", "w")
+    mem_card.write(str(RNGsol))
+    mem_card.close()
+except:
+    imgCRT = Image.open('images/crtFrame.png')
+    imgCRTf = Image.open('images/crtFrameFlat.png')
+    imgTitle = ImageTk.PhotoImage(Image.open('images/crtTitle.png'))
+    imgInfo = ImageTk.PhotoImage(imgCRT.crop([3,0,350,120]).resize((350,120),Image.ANTIALIAS))
+    imgInit = ImageTk.PhotoImage(imgCRTf.resize((350,60),Image.ANTIALIAS))
+
+    fontSz = 26-2*fontFree
+
+
+    btnTitle = Label(root, image=imgTitle, borderwidth=5, relief=RIDGE,
+                     bg='#66684B', fg='#c4c4c4')
+    btnTitle.place(width=350,height=120, x=45,y=45)
+
+    btnInfo1 = Label(root, text="Tried to load\nINVALID DATA",
+                    image=imgInfo, compound='c', borderwidth=5, relief=RIDGE,
+                    font=tkFont.Font(family=usefont, size=fontSz, weight='bold'),
+                    bg='#66684B', fg='#ba1005')
+    btnInfo1.place(width=350,height=120, x=45,y=195)
+
+    btnInfo2 = Label(root, text="Please close and make sure\nsave_data.txt contains valid data,\nor reopen and 'RANDOMIZE!'\n to create a new save file.",
+                    image=imgInfo, compound='c', borderwidth=5, relief=RIDGE,
+                    font=tkFont.Font(family=usefont, size=fontSz-8, weight='normal'),
+                    bg='#66684B', fg='#586aa5')
+    btnInfo2.place(width=350,height=120, x=45,y=325)
+
+    btnClose = Button(root, text="CLOSE", image=imgInit, command=root.destroy,
+                     compound='c', borderwidth=5, relief=RIDGE,
+                     font=tkFont.Font(family=usefont, size=24, weight='bold'),
+                     bg='#66684B', fg='#586aa5')
+    btnClose.place(width=350,height=60, x=45,y=605)
+    YellowHighlight(btnClose)
+
+    root.mainloop()
+
+#------------
+#   PAGE 2
+#------------
 
 # PREVIOUS AND NEXT
 def prevP():
@@ -530,18 +588,12 @@ for btnGCi in range(len(nameGC)):
     CreateToolTip(banGC[btnGCi], ('Giant Clank cannot use '+nameGC[btnGCi]))
 
 
-global RNGsol
-# return PW, PG, PC, PGC, RSW, RSG, RSC, RSGC
+# Initial State (Veldin 1)
+for w in PW[idxP+1]:
+    btnW[w]['state'] = NORMAL
+    if w not in RSW[idxP+1]:
+        banW[w].place(height=50,width=50)
 
-PW   = RNGsol[0]
-PG   = RNGsol[1]
-PC   = RNGsol[2]
-PGC  = RNGsol[3]
-RSW  = RNGsol[4]
-RSG  = RNGsol[5]
-RSC  = RNGsol[6]
-RSGC = RNGsol[7]
-KIII = RNGsol[8]
 
 # DEBUGGING!
 #print("Weapon pools: ", PW,  "\nSelected Weapons: ", RSW)
@@ -550,14 +602,6 @@ KIII = RNGsol[8]
 #print("Gadget pools: ", PG,  "\nSelected Gadgets: ", RSG)
 #print("Kalebo III: ", KIII)
 
-for w in PW[idxP+1]:
-    btnW[w]['state'] = NORMAL
-    if w not in RSW[idxP+1]:
-        banW[w].place(height=50,width=50)
-
-mem_card = open("save_data.txt", "w")
-mem_card.write(str(RNGsol))
-mem_card.close()
 
 root.mainloop()
 

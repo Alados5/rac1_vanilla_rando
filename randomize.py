@@ -1,6 +1,6 @@
-import math
 import random
 
+import math
 def getSelection(pool, Kmin=0, Kmax=1e6):
     Kmax = min(Kmax, len(pool)) + 1
     K = random.randrange(Kmin, Kmax)
@@ -96,8 +96,9 @@ def randomize(packless,ilj_snflip,batalia_si,tree_skip,oltanis_mb):
     if(1 not in Sc):
         Sc = []
     Sg = getSelection(pool_g)
-    if(not batalia_si and 3 not in Sg):
-        Sg.append(3)
+    if(not batalia_si and 3 not in Sg and 7 not in Sg):
+        Sg_aux = getSelection([3,7],1,2)
+        Sg += Sg_aux
 
     PW[6] = [w for w in pool_w]
     PC[6] = [c for c in pool_c]
@@ -106,7 +107,7 @@ def randomize(packless,ilj_snflip,batalia_si,tree_skip,oltanis_mb):
     RSC[6] = Sc
     RSG[6] = Sg
 
-    if(3 in Sg):
+    if(3 in Sg or 7 in Sg):
         pool_g.append(13)
     if(7 in Sg or (1 in Sg and 1 in Sc and 2 in Sc)):
         pool_g.append(2)
@@ -264,7 +265,7 @@ def randomize(packless,ilj_snflip,batalia_si,tree_skip,oltanis_mb):
     RSW[14] = Sw
     RSG[14] = Sg
 
-    if(8 in Sg or 2 in Sg):
+    if(2 in Sg or 8 in Sg or (7 in Sg and ilj_snflip)):
         pool_g.append(9)
 
 
